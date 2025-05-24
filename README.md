@@ -61,24 +61,29 @@
       ></path></svg
   ></a>
 </div>
-<p align="left" dir="auto">🎓 INFORMÁTICA</p>
+<p align="left" dir="auto">🎓 Técnico en Computación e Informática apasionado por la tecnología, la enseñanza y el emprendimiento.</p>
 <p dir="auto">
-  🎥 PEQUEÑO CREADOR DE CONTENIDO que transmite sus conocimientos 📚 a través de
-  las redes en base a mucho estudio 😵 y experiencia
+  🎥 Creador de contenido en redes sociales, donde comparto lo que sé para ayudar a otros a crecer profesionalmente. Mis cursos y videos están hechos con dedicación y una buena dosis de práctica real. 📚💡
+
+📊 Me gusta transformar datos en decisiones, automatizar tareas repetitivas y construir soluciones útiles para la vida real.
 </p>
-<p dir="auto">
-  💻 unos cuántos años de experiencia en el proceso de desarrollo de software
-  (solo voy a decir más de 15 para no deschavar mi edad 🙈)
+<p dir="auto">Especializado en:
+<br>
+.NET C# (Windows Forms y Web)
+<br>
+SQL Server y análisis de datos
+<br>
+Power BI, Excel avanzado y automatización
+<br>
+Desarrollo web con HTML, CSS y JavaScript
 </p>
-<p dir="auto">
-  📝 roles en el ámbito: desarrollador... líder... arquitecto... cofundador...
-  emprendedor... programador freelance... y en un futuro quién sabe
+<p dir="auto"> Con más de 7 años de experiencia (sí, aunque no parezca 😅), he trabajado como programador independiente, soporte técnico, capacitador y ahora como emprendedor enfocado en proyectos digitales y educativos.
   <g-emoji class="g-emoji" alias="relaxed">☺️</g-emoji>
 </p>
 <p dir="auto">
   📫 Contacto:
   <strong
-    ><a href="mailto:unsimpledev@gmail.com">unsimpledev@gmail.com</a></strong
+    ><a href="mailto:ugkum1997@gmail.com">ugkum1997@gmail.com</a></strong
   >
 </p>
 <div class="markdown-heading" dir="auto">
@@ -145,8 +150,8 @@
 </div>
 <p align="center" dir="auto"></p>
 
-<markdown-accessiblity-table data-catalyst=""
-  ><table align="left">
+<markdown-accessiblity-table data-catalyst="">
+<table align="left">
     <tbody>
       <tr border="none">
         <td width="60%" align="center">
