@@ -1,10 +1,3 @@
-<div align="center" width="20">
-  <img
-    alt="awajun"
-    src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/488746954_122150079908590352_3663904410897704456_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=v675du-37UsQ7kNvwEQs8W8&_nc_oc=AdmJ9tgVTT1gr-WjsYh40Q9X96oly3BIfmyAWeao0vI8BH-d0xCEv2K-CGEgHIm1PMo&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=sQAoISyF-gutt-dgc5HTzg&oh=00_AfLDKeMmjOlBiC8qfl1a_GQ0Vj9cg8U_UpUqli2n9XXWpA&oe=6837AC13"
-    width="150"
-  />
-</div>
 <h1 align="center">
   Hi
   <img
