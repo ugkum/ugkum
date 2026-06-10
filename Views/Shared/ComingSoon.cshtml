@@ -1,0 +1,21 @@
+@{
+    Layout = "_Layout";
+    var moduleName = ViewData["ModuleName"]?.ToString() ?? "Módulo";
+}
+
+<section class="ugkum-section coming-soon-section">
+    <div class="container text-center">
+        <div class="glass-card coming-soon-card mx-auto reveal">
+            <div class="coming-soon-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h1 class="section-title">@moduleName</h1>
+            <p class="section-desc mx-auto">
+                Este módulo está en desarrollo y estará disponible próximamente.
+            </p>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-ugkum-primary mt-3">
+                <i class="fa-solid fa-arrow-left me-2"></i>Volver al inicio
+            </a>
+        </div>
+    </div>
+</section>

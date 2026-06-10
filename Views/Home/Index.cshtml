@@ -1,0 +1,338 @@
+﻿@model HomeIndexViewModel
+@{
+    Layout = "_Layout";
+    var landing = Model.Landing;
+    var contactSuccess = TempData["ContactSuccess"] as bool? ?? false;
+}
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECCIÓN 1: HERO
+     ═══════════════════════════════════════════════════════════════════════ -->
+<section id="inicio" class="ugkum-hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container">
+        <div class="row align-items-center min-vh-100 py-5">
+            <div class="col-lg-6 order-2 order-lg-1">
+                <div class="hero-content reveal">
+                    <span class="hero-badge">
+                        <i class="fa-solid fa-bolt me-2"></i>Transformación Digital Empresarial
+                    </span>
+                    <h1 class="hero-title">
+                        Construimos el <span class="text-gradient">futuro digital</span> de las organizaciones
+                    </h1>
+                    <p class="hero-subtitle">
+                        Desarrollamos soluciones empresariales y de salud utilizando tecnologías Microsoft de última generación.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#proyectos" class="btn btn-ugkum-primary btn-lg">
+                            <i class="fa-solid fa-folder-open me-2"></i>Ver Proyectos
+                        </a>
+                        <a href="#contacto" class="btn btn-ugkum-outline btn-lg">
+                            <i class="fa-solid fa-paper-plane me-2"></i>Contactar
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Tecnologías</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Proyectos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Microsoft Stack</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2">
+                <div class="hero-visual reveal delay-1">
+                    <div class="hero-illustration">
+                        <svg viewBox="0 0 500 500" class="hero-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="gradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00BFFF;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#7B61FF;stop-opacity:1" />
+                                </linearGradient>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <circle cx="250" cy="250" r="180" fill="none" stroke="url(#gradPrimary)" stroke-width="1" opacity="0.2" class="orbit-ring"/>
+                            <circle cx="250" cy="250" r="140" fill="none" stroke="url(#gradPrimary)" stroke-width="1" opacity="0.3" class="orbit-ring delay-ring"/>
+                            <circle cx="250" cy="250" r="100" fill="none" stroke="url(#gradPrimary)" stroke-width="1.5" opacity="0.4" class="orbit-ring delay-ring-2"/>
+                            <polygon points="250,170 310,220 290,290 210,290 190,220" fill="url(#gradPrimary)" opacity="0.15" filter="url(#glow)"/>
+                            <polygon points="250,190 295,230 280,280 220,280 205,230" fill="none" stroke="url(#gradPrimary)" stroke-width="2" filter="url(#glow)" class="pulse-shape"/>
+                            <circle cx="250" cy="100" r="8" fill="#00BFFF" filter="url(#glow)" class="node-pulse"/>
+                            <circle cx="400" cy="250" r="6" fill="#7B61FF" filter="url(#glow)" class="node-pulse delay-node"/>
+                            <circle cx="250" cy="400" r="7" fill="#00BFFF" filter="url(#glow)" class="node-pulse delay-node-2"/>
+                            <circle cx="100" cy="250" r="6" fill="#7B61FF" filter="url(#glow)" class="node-pulse delay-node-3"/>
+                            <line x1="250" y1="190" x2="250" y2="108" stroke="#00BFFF" stroke-width="1" opacity="0.5"/>
+                            <line x1="295" y1="230" x2="394" y2="250" stroke="#7B61FF" stroke-width="1" opacity="0.5"/>
+                            <line x1="205" y1="230" x2="106" y2="250" stroke="#7B61FF" stroke-width="1" opacity="0.5"/>
+                            <line x1="250" y1="280" x2="250" y2="393" stroke="#00BFFF" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                        <div class="floating-card floating-card-1 glass-card">
+                            <i class="fa-solid fa-cloud text-primary-accent"></i>
+                            <span>Azure Cloud</span>
+                        </div>
+                        <div class="floating-card floating-card-2 glass-card">
+                            <i class="fa-solid fa-chart-line text-secondary-accent"></i>
+                            <span>Power BI</span>
+                        </div>
+                        <div class="floating-card floating-card-3 glass-card">
+                            <i class="fa-solid fa-heart-pulse text-primary-accent"></i>
+                            <span>Salud Digital</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 2: SOBRE NOSOTROS -->
+<section id="nosotros" class="ugkum-section">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Sobre Nosotros</span>
+            <h2 class="section-title">Quiénes <span class="text-gradient">Somos</span></h2>
+            <p class="section-desc mx-auto">
+                UGKUM Innovation es una empresa enfocada en desarrollar soluciones digitales para salud,
+                gestión empresarial e inteligencia de negocios.
+            </p>
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-md-4 reveal">
+                <div class="glass-card about-card h-100">
+                    <div class="about-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Misión</h3>
+                    <p>@landing.About.Mission</p>
+                </div>
+            </div>
+            <div class="col-md-4 reveal delay-1">
+                <div class="glass-card about-card h-100">
+                    <div class="about-icon secondary"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Visión</h3>
+                    <p>@landing.About.Vision</p>
+                </div>
+            </div>
+            <div class="col-md-4 reveal delay-2">
+                <div class="glass-card about-card h-100">
+                    <div class="about-icon"><i class="fa-solid fa-gem"></i></div>
+                    <h3>Valores</h3>
+                    <ul class="values-list">
+                        @foreach (var value in landing.About.Values)
+                        {
+                            <li><i class="fa-solid fa-check"></i> @value</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 3: SERVICIOS -->
+<section id="servicios" class="ugkum-section section-alt">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Servicios</span>
+            <h2 class="section-title">Soluciones <span class="text-gradient">Empresariales</span></h2>
+            <p class="section-desc mx-auto">
+                Tecnología Microsoft de punta para transformar su organización.
+            </p>
+        </div>
+        <div class="row g-4 mt-2">
+            @for (var i = 0; i < landing.Services.Count; i++)
+            {
+                var service = landing.Services[i];
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="glass-card service-card h-100">
+                        <div class="service-icon">
+                            <i class="fa-solid @service.Icon"></i>
+                        </div>
+                        <h3>@service.Title</h3>
+                        <p>@service.Description</p>
+                        <div class="card-glow-line"></div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 4: PROYECTOS -->
+<section id="proyectos" class="ugkum-section">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Portafolio</span>
+            <h2 class="section-title">Nuestros <span class="text-gradient">Proyectos</span></h2>
+            <p class="section-desc mx-auto">
+                Soluciones reales que generan impacto en salud y gestión empresarial.
+            </p>
+        </div>
+        <div class="row g-4 mt-2">
+            @for (var i = 0; i < landing.Projects.Count; i++)
+            {
+                var project = landing.Projects[i];
+                <div class="col-md-6 reveal">
+                    <div class="glass-card project-card h-100">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fa-solid @project.Icon"></i>
+                            </div>
+                            <span class="project-tag">@project.Tag</span>
+                        </div>
+                        <h3>@project.Title</h3>
+                        <p>@project.Description</p>
+                        <a href="#contacto" class="project-link">
+                            Solicitar demo <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 5: TECNOLOGÍAS -->
+<section id="tecnologias" class="ugkum-section section-alt">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Stack Tecnológico</span>
+            <h2 class="section-title">Tecnologías que <span class="text-gradient">Dominamos</span></h2>
+        </div>
+        <div class="tech-grid reveal">
+            @foreach (var tech in landing.Technologies)
+            {
+                <div class="tech-item glass-card">
+                    <i class="@GetTechIconClass(tech.Name) tech-icon"></i>
+                    <span>@tech.Name</span>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 6: POR QUÉ ELEGIRNOS -->
+<section id="ventajas" class="ugkum-section">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Ventajas</span>
+            <h2 class="section-title">Por Qué <span class="text-gradient">Elegirnos</span></h2>
+        </div>
+        <div class="row g-4 mt-2">
+            @for (var i = 0; i < landing.Advantages.Count; i++)
+            {
+                var advantage = landing.Advantages[i];
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="glass-card advantage-card h-100 text-center">
+                        <div class="advantage-icon">
+                            <i class="fa-solid @advantage.Icon"></i>
+                        </div>
+                        <h3>@advantage.Title</h3>
+                        <p>@advantage.Description</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 7: CONTACTO -->
+<section id="contacto" class="ugkum-section section-alt">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 reveal">
+                <span class="section-badge">Contacto</span>
+                <h2 class="section-title">Hablemos de su <span class="text-gradient">Proyecto</span></h2>
+                <p class="section-desc">
+                    Cuéntenos sobre su idea o necesidad. Nuestro equipo le responderá a la brevedad.
+                </p>
+                <div class="contact-info mt-4">
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>contacto@ugkum.com</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+51 999 999 999</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Lima, Perú</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 reveal delay-1">
+                <div class="glass-card contact-form-card">
+                    @if (contactSuccess)
+                    {
+                        <div class="alert alert-ugkum-success" role="alert">
+                            <i class="fa-solid fa-circle-check me-2"></i>
+                            ¡Mensaje enviado correctamente! Nos pondremos en contacto pronto.
+                        </div>
+                    }
+                    <form asp-controller="Contact" asp-action="Send" method="post" novalidate>
+                        @Html.AntiForgeryToken()
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label asp-for="ContactForm.Name" class="form-label"></label>
+                                <input asp-for="ContactForm.Name" class="form-control ugkum-input" placeholder="Su nombre" />
+                                <span asp-validation-for="ContactForm.Name" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="ContactForm.Email" class="form-label"></label>
+                                <input asp-for="ContactForm.Email" class="form-control ugkum-input" placeholder="correo@empresa.com" />
+                                <span asp-validation-for="ContactForm.Email" class="text-danger small"></span>
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="ContactForm.Phone" class="form-label"></label>
+                                <input asp-for="ContactForm.Phone" class="form-control ugkum-input" placeholder="+51 999 999 999" />
+                                <span asp-validation-for="ContactForm.Phone" class="text-danger small"></span>
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="ContactForm.Message" class="form-label"></label>
+                                <textarea asp-for="ContactForm.Message" class="form-control ugkum-input" rows="5" placeholder="Cuéntenos sobre su proyecto..."></textarea>
+                                <span asp-validation-for="ContactForm.Message" class="text-danger small"></span>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-ugkum-primary btn-lg w-100">
+                                    <i class="fa-solid fa-paper-plane me-2"></i>Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+@functions {
+    /// <summary>Retorna la clase Font Awesome correcta según la tecnología.</summary>
+    string GetTechIconClass(string name) => name switch
+    {
+        "C#" => "fa-solid fa-hashtag",
+        ".NET" => "fa-brands fa-microsoft",
+        "ASP.NET Core" => "fa-solid fa-globe",
+        "SQL Server" => "fa-solid fa-database",
+        "Entity Framework" => "fa-solid fa-layer-group",
+        "Power BI" => "fa-solid fa-chart-bar",
+        "Azure" => "fa-solid fa-cloud",
+        "GitHub" => "fa-brands fa-github",
+        _ => "fa-solid fa-code"
+    };
+}

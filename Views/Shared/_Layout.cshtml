@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="UGKUM Innovation - Desarrollo de software empresarial, sistemas para salud y transformación digital con tecnologías Microsoft." />
+    <meta name="keywords" content="ASP.NET Core, SQL Server, Power BI, Azure, desarrollo empresarial, salud digital" />
+    <title>@ViewData["Title"] - UGKUM Innovation</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Estilos UGKUM -->
+    <link rel="stylesheet" href="~/css/ugkum.css" asp-append-version="true" />
+</head>
+<body class="ugkum-body">
+
+    <!-- Canvas de partículas de fondo -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- Navbar glassmorphism -->
+    <header class="ugkum-header fixed-top">
+        <nav class="navbar navbar-expand-lg ugkum-navbar">
+            <div class="container">
+                <a class="navbar-brand ugkum-brand" asp-controller="Home" asp-action="Index">
+                    <span class="brand-icon"><i class="fa-solid fa-cube"></i></span>
+                    <span class="brand-text">UGKUM<span class="brand-accent"> Innovation</span></span>
+                </a>
+
+                <button class="navbar-toggler ugkum-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link ugkum-nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link ugkum-nav-link" href="#nosotros">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link ugkum-nav-link" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link ugkum-nav-link" href="#proyectos">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link ugkum-nav-link" href="#tecnologias">Tecnologías</a></li>
+                        <li class="nav-item"><a class="nav-link ugkum-nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-ugkum-primary btn-sm" href="#contacto">Hablemos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer class="ugkum-footer">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-4 text-center text-lg-start">
+                    <div class="footer-brand mb-2">
+                        <i class="fa-solid fa-cube me-2"></i>UGKUM Innovation
+                    </div>
+                    <p class="footer-tagline mb-0">Innovación • Tecnología • Transformación Digital</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="footer-social">
+                        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://wa.me" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:contacto@ugkum.com" aria-label="Correo"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <p class="footer-copy mb-0">&copy; @DateTime.Now.Year UGKUM Innovation. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/ugkum.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
