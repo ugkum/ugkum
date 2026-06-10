@@ -26,8 +26,11 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
+else
+{
+    app.UseHttpsRedirection();
+}
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
@@ -43,4 +46,6 @@ app.MapControllerRoute(
 // app.MapControllerRoute(name: "portal", pattern: "portal/{action=Index}", defaults: new { controller = "Portal" });
 // app.MapControllerRoute(name: "products", pattern: "productos/{action=Index}/{id?}", defaults: new { controller = "Products" });
 
-app.Run();
+// Render (y otros PaaS) inyectan PORT — escuchar en 0.0.0.0
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Run($"http://0.0.0.0:{port}");
